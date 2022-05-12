@@ -13,3 +13,7 @@ def test_testing_config(application):
     assert application.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:///:memory:'
 
 
+def test_production_config(application):
+    application.config.from_object('app.config.ProductionConfig')
+    assert not application.config['DEBUG']
+    assert not application.config['TESTING']
