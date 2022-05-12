@@ -1,26 +1,30 @@
 {% extends "base.html" %}
 {% from 'bootstrap5/table.html' import render_table %}
 {% from "bootstrap5/pagination.html" import render_pagination %}
-{% block content %}
-    {% from 'bootstrap5/form.html' import render_form, render_field, render_form_row %}
-    <div id="row">
-    <h2>Dashboard</h2>
-    <p>Welcome: {{ current_user.email }}</p>
-    </div>
 
-    <h2>Balance: {{ current_user.balance }}</h2>
-    <h2>Your Account Transactions</h2>
+
+<div class="row col-8">
+    {% block title %}Browse Transactions: {{ record_type }}{% endblock %}
+    {% block content %}
+
+                <a href="{{ url_for("account_transactions.account_transactions_upload") }}" class="btn col-3 mb-5 btn-info" role="button">Upload Account Transactions</a>
+
+        <h2>Browse: Account Transactions</h2>
         {{ render_table(data) }}
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
         <script type=text/javascript>
             $(document).ready(function () {
-                $('.table').DataTable({
-                    "search": {
-                        "user_id": {{ current_user.id }}
-                    }
-                });
+                $('.table').DataTable();
             });
         </script>
-{% endblock %}
+
+
+
+    {% endblock %}
+</div>
+
+
+

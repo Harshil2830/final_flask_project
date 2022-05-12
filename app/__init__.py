@@ -7,6 +7,7 @@ from flask_login import login_manager
 from flask_wtf import CSRFProtect
 from flask_cors import CORS
 
+from app.account_transactions import account_transactions
 from app.auth import auth
 from app.cli import create_database
 from app.db import db, database
@@ -46,8 +47,8 @@ def create_app():
 
     # app.register_blueprint(log_con)
     # app.register_blueprint(error_handlers)
-    # app.register_blueprint(songs)
-    # app.context_processor(utility_text_processors)
+    app.register_blueprint(account_transactions)
+
     # add command function to cli commands
     app.cli.add_command(create_database)
     db.init_app(app)
