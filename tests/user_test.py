@@ -1,8 +1,6 @@
 import logging
-
 from flask_login import FlaskLoginClient
 from werkzeug.security import generate_password_hash
-
 from app import db
 from app.db.models import User, Transaction
 

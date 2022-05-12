@@ -36,17 +36,19 @@ def create_app():
     # https://flask-login.readthedocs.io/en/latest/  <-login manager
     login_manager.init_app(app)
     login_manager.login_view = "auth.login"
+
     # Needed for CSRF protection of form submissions and WTF Forms
     # https://wtforms.readthedocs.io/en/3.0.x/
     csrf = CSRFProtect(app)
+
     # https://bootstrap-flask.readthedocs.io/en/stable/
     bootstrap = Bootstrap5(app)
+
     # these load functions with web interface
     app.register_blueprint(simple_pages)
     app.register_blueprint(auth)
     app.register_blueprint(database)
     # these load functionality without a web interface
-
     app.register_blueprint(log_con)
     app.register_blueprint(error_handlers)
     app.register_blueprint(account_transactions)

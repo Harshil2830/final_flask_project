@@ -3,9 +3,7 @@ import os
 from logging.config import dictConfig
 
 import flask
-from flask import request, current_app
-
-
+from flask import request
 from app import config
 
 log_con = flask.Blueprint('log_con', __name__)
@@ -24,8 +22,6 @@ def after_request_logging(response):
 
 @log_con.before_app_first_request
 def setup_logs():
-
-    # set the name of the apps log folder to logs
     logdir = config.Config.LOG_DIR
     # make a directory if it doesn't exist
     if not os.path.exists(logdir):
@@ -148,6 +144,5 @@ LOGGING_CONFIG = {
             'level': 'INFO',
             'propagate': False
         },
-
     }
 }

@@ -119,8 +119,6 @@ def edit_account():
     return render_template('manage_account.html', form=form)
 
 
-# You should probably move these to a new Blueprint to clean this up.  These functions below are for user management
-
 @auth.route('/users')
 @login_required
 @admin_required

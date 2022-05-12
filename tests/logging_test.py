@@ -1,6 +1,8 @@
 import os
 from app import config
 
+""" Tests to check log files exist """
+
 
 def test_log_dir_creation(client):
     logdir = config.Config.LOG_DIR

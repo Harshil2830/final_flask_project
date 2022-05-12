@@ -4,10 +4,6 @@ from app import config, db, User
 from app.account_transactions import csv_upload
 
 
-# using the link below Flask-Login provides a simple, custom test client class that will set the user’s login cookie
-# https://flask-login.readthedocs.io/en/latest/#automated-testing
-
-
 def test_upload_csv_denied(application):
     """ Trying to upload music.cvs without being logged in - denied """
     application.test_client_class = FlaskLoginClient

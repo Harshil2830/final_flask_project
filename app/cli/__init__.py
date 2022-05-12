@@ -9,7 +9,7 @@ from app.db import db
 def create_database():
     # get root directory of project
     root = os.path.dirname(os.path.abspath(__file__))
-    # set the name of the apps log folder to logs
+    # set db directory
     db_dir = os.path.join(root, '../../database')
     # make a directory if it doesn't exist
     if not os.path.exists(db_dir):
