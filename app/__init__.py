@@ -12,6 +12,8 @@ from app.auth import auth
 from app.cli import create_database
 from app.db import db, database
 from app.db.models import User
+from app.error_handlers import error_handlers
+from app.logging_config import log_con
 from app.simple_pages import simple_pages
 
 login_manager = flask_login.LoginManager()
@@ -45,8 +47,8 @@ def create_app():
     app.register_blueprint(database)
     # these load functionality without a web interface
 
-    # app.register_blueprint(log_con)
-    # app.register_blueprint(error_handlers)
+    app.register_blueprint(log_con)
+    app.register_blueprint(error_handlers)
     app.register_blueprint(account_transactions)
 
     # add command function to cli commands

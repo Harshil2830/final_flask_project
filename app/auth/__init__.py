@@ -1,3 +1,5 @@
+import logging
+
 from flask import Blueprint, render_template, redirect, url_for, flash, current_app, abort
 from flask_login import login_user, login_required, logout_user, current_user
 from jinja2 import TemplateNotFound
@@ -27,6 +29,8 @@ def register():
                 db.session.add(user)
                 db.session.commit()
             flash('Congratulations, you are now a registered user!', "success")
+            log = logging.getLogger("user_activity")
+            log.info(user.email + " just registered.")
             return redirect(url_for('auth.login'), 302)
         else:
             flash('Already Registered')
@@ -50,6 +54,8 @@ def login():
             db.session.commit()
             login_user(user)
             flash("Welcome", 'success')
+            log = logging.getLogger("user_activity")
+            log.info(user.email + " just logged in.")
             return redirect(url_for('auth.dashboard'))
     return render_template('login.html', form=form)
 
