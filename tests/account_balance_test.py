@@ -1,5 +1,4 @@
 from flask_login import FlaskLoginClient
-
 from app import User, db
 
 

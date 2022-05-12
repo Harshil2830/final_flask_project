@@ -1,5 +1,5 @@
 import os
-from flask import Blueprint, cli
+from flask import Blueprint
 from flask_sqlalchemy import SQLAlchemy
 from app import config
 
@@ -16,7 +16,6 @@ def init_db():
 @database.before_app_first_request
 def create_db_file_if_does_not_exist():
     root = config.Config.BASE_DIR
-    # set the name of the apps log folder to logs
     db_dir = os.path.join(root, '..', config.Config.DB_DIR)
     # make a directory if it doesn't exist
     if not os.path.exists(db_dir):
@@ -27,7 +26,6 @@ def create_db_file_if_does_not_exist():
 @database.before_app_first_request
 def create_upload_folder():
     root = config.Config.BASE_DIR
-    # set the name of the apps log folder to logs
     upload_folder = os.path.join(root, '..', config.Config.UPLOAD_FOLDER)
     # make a directory if it doesn't exist
     if not os.path.exists(upload_folder):
