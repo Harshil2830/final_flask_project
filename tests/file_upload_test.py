@@ -13,11 +13,13 @@ def test_upload_csv_denied(application):
     application.test_client_class = FlaskLoginClient
     # no user in session = no user logged in
     assert db.session.query(User).count() == 0
+
+    base_path = config.Config.BASE_DIR
+    transactions_file = os.path.join(base_path, '../transactions.csv')
+
     with application.test_client(user=None) as client:
         response = client.get('/account_transactions/upload')
         assert response.status_code == 302
-        base_path = config.Config.BASE_DIR
-        transactions_file = os.path.join(base_path, '../transactions.csv')
         form = csv_upload()
         form.file = transactions_file
         assert form.validate
@@ -29,6 +31,7 @@ def test_upload_csv_success(application):
     user = User('hss56@njit.edu', 'testpass', 1)
     db.session.add(user)
     db.session.commit()
+    # user is logged in
     assert user.email == 'hss56@njit.edu'
     assert db.session.query(User).count() == 1
 
