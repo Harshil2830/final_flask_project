@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="text-center">OOPs</h1>
+    <br>
+
+    <div class="container">
+        <h3>What is OOP?</h3>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    A programming model based on the concept of "objects" rather than logic,
+                    in which an object can be defined as a data field that has unique attributes and behavior.
+                </p>
+                <br>
+
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item bg-dark">
+                        <h1 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed bg-success text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Encapsulation
+                            </button>
+                        </h1>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Putting data and methods for that data in one unit, putting restrictions on the data and its methods. A class is an example of encapsulation as it encapsulates all the data that is member functions, variables, etc.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-dark">
+                        <h1 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed bg-primary text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Inheritance
+                            </button>
+                        </h1>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The capability of one class to derive or inherit the properties from another class. It's just like real-world relationships, you can reuse the code, and allows you to add more features to a class without modifying it.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-dark">
+                        <h1 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed bg-danger text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                Polymorphism
+                            </button>
+                        </h1>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Polymorphism means having many forms. The same function name is used for different methods, but each with its own signature.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-dark">
+                        <h1 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed bg-warning text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                Abstraction
+                            </button>
+                        </h1>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Abstraction is like creating a blueprint of something. It allows you to declare a set of abstract methods without any implementation that must be created within any child classes built from the abstract class.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <img src="{{ url_for('static', filename='images/oop.jpg') }}" class="img-thumbnail" alt="OOPs" >
+            </div>
+        </div>
+    </div>
+    <br>
+{% endblock %}

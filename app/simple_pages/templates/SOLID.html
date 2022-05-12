@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="text-center">SOLID</h1>
+    <br>
+
+    <div class="container">
+        <h3>What is SOLID?</h3>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    SOLID is an acronym for the first five object-oriented design principles by Robert C. Martin.
+                </p>
+                <br>
+
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item bg-dark">
+                        <h1 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed bg-success text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Single-Responsibility
+                            </button>
+                        </h1>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                One class should only do one thing.<br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-dark">
+                        <h1 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed bg-primary text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Open-Closed
+                            </button>
+                        </h1>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Objects or entities should be open for extension but closed for modification. This means you can extend the class but not modify it.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-dark">
+                        <h1 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed bg-secondary text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                Liskov Substitution
+                            </button>
+                        </h1>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Objects of a superclass should be replaceable with objects of its subclasses without breaking the application.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-dark">
+                        <h1 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed bg-warning text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                Interface Segregation
+                            </button>
+                        </h1>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                A client should not be exposed to methods it doesn't need. Declaring methods in an interface that the client doesn't need pollutes the interface and leads to a “bulky” or “fat” interface.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-dark">
+                        <h1 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed bg-danger text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                Dependency Inversion
+                            </button>
+                        </h1>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                High level modules should not depend on low level modules; in fact both should depend on abstractions.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-4">
+                <img src="{{ url_for('static', filename='images/solid.jpeg') }}" class="img-thumbnail" alt="SOLID" >
+            </div>
+        </div>
+    </div>
+    <br>
+{% endblock %}

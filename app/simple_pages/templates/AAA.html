@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="text-center">AAA Testing</h1>
+    <br>
+
+    <div class="container">
+        <h3>What is Unit Testing?</h3>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    Testing individual components of a software program or application.
+                    It's used to check that all the individual parts are working as intended.
+                    Testing enables you to see what the software does and how well it does it so that the business can measure the quality of the software before it goes live.
+                    The benefits of testing include preventing bugs, reducing development costs and improving performance.
+                </p>
+                <br>
+                <h3><strong class="text-success">Arrange</strong>-<strong class="text-warning">Act</strong>-<strong class="text-danger">Assert</strong></h3>
+                <p>
+                    AAA is a powerful pattern for writing well-structured tests.
+                </p>
+                <p>
+                    <strong class="text-success">Arrange</strong> - inputs and targets. This phase is where you set up the test cases, like creating an object, or connecting to a database.<br>
+                    Example: <code>tuple_list = (1, 2)</code> is setting up the tuple input parameter.
+                </p>
+                <p>
+                    <strong class="text-warning">Act</strong> - on the target behavior. This phase is where you perform the action on the thing being tested, like calling a function or API.<br>
+                    Example: <code>calculation = Addition.create(tuple_list)</code> is where the create function is called using the tuple_list input.
+                </p>
+                <p>
+                    <strong class="text-danger">Assert</strong> - expected outcomes. This phase is where you verify the outcome/response from the previous action. This is where its determined whether the test passes or fails.<br>
+                    Example: <code>assert calculation.get_result() == 3</code> is where you test the outcome, and whether the addition passes or fails.
+                </p>
+            </div>
+            <div class="col-4">
+                <img src="{{ url_for('static', filename='images/aaa.png') }}" class="img-thumbnail" alt="Unit Test - AAA" ><br>
+                <h2 class="mt-5"><strong>Calculator Test Example</strong></h2><br>
+                <img src="{{ url_for('static', filename='images/testExample.JPG') }}" class="img-thumbnail" alt="Test Example" >
+            </div>
+        </div>
+    </div>
+    <br>
+{% endblock %}

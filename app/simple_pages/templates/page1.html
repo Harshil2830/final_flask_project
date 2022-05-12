@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <h1 class="text-center">Git</h1>
+    </div>
+    <br>
+    <div class="container">
+        <h3>What are Branches?</h3>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    Branches are lightweight movable pointers to one of the commits. Think of branches like they are separate environments.
+                    When you make changes and commit them to a branch the pointer of that branch moves to the latest commit.
+                    You start off with a default branch called main or master.
+                    Then you can diverge to another branch to make changes without affecting the original branch. Then you can merge back to main branch.
+                </p>
+            </div>
+            <div class="col-4">
+                <img src="{{ url_for('static', filename='images/git_branch.png') }}" class="img-thumbnail" alt="Git Branches" >
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h3>What is a Merge?</h3>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    Merge is combining the forked branch back to the original branch.
+                    For instance, you work on a feature in a separate branch, and once it completed and tested you can combine
+                    the feature back to the main branch with the main program.
+                    It will basically add the new code to the main branch.
+                </p>
+            </div>
+            <div class="col-4">
+                <img src="{{ url_for('static', filename='images/git_merge.png') }}" class="img-thumbnail" alt="Git Merge" >
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h3>What is a Commit?</h3>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    Commits are snapshots of the project's current staged changes.
+                    A commit basically means that you are saving changes of the project to the computer/local repository.
+                </p>
+            </div>
+            <div class="col-4">
+                <img src="{{ url_for('static', filename='images/git_commit.jpg') }}" class="img-thumbnail" alt="Git Commit" >
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h3>What are Tags?</h3>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    Tags are used to identify specific points/commits in history of the project. They are generally used
+                    to mark a version of the project that was released, for example, v3.04
+                </p>
+            </div>
+            <div class="col-4">
+                <img src="{{ url_for('static', filename='images/git_tag.png') }}" class="img-thumbnail" alt="Git Container" >
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h3>What are Repositories?</h3>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    Repository is just a project. It's just a collection of files of different versions of a project.
+                    Also, it tracks all the changes made to all the files in the project to build a history overtime.
+                </p>
+            </div>
+            <div class="col-4">
+                <img src="{{ url_for('static', filename='images/git_repo.png') }}" class="img-thumbnail" alt="Git Repo" >
+            </div>
+        </div>
+    </div>
+    <br>
+{% endblock %}

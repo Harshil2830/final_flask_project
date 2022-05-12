@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <article>
+            <h1>Index Page</h1>
+        </article>
+        {% if current_user.is_authenticated == false %}
+            <div class="col">
+                <h1>Hi! I'm Harshil</h1>
+                <p>I am a senior at NJIT graduating this semester majoring in IT specializing in Network and Information Security and minor in CS. GPA: 3.90</p>
+                <p>I work part-time at a small computer store as a Junior IT Service Specialist. I have a great deal of experience with Full-Stack development.</p>
+                <p>Skills: <br> PHP, Python, JavaScript, HTML, CSS, Bootstrap, Java, Bash, C#, C++, SQL, MySQL, Data Structures and Algorithms, Object-Oriented Programming, Docker, Agile, Scrum, AWS, GIT, Linux</p>
+            </div>
+            <div class="col">
+                <h1 class="text-center">My Technologies</h1>
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <a href="{{ url_for('simple_pages.show', page="page1")}}">
+                            <img src="{{ url_for('static', filename='images/git.jpg') }}" class="d-block w-100" alt="GIT">
+                        </a>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <a href="{{ url_for('simple_pages.show', page="page2")}}">
+                            <img src="{{ url_for('static', filename='images/docker.png') }}" class="d-block w-100" alt="DOCKER">
+                        </a>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <a href="{{ url_for('simple_pages.show', page="page3")}}">
+                            <img src="{{ url_for('static', filename='images/flask.jfif') }}" class="d-block w-100" alt="FLASK">
+                        </a>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                      <a href="{{ url_for('simple_pages.show', page="page4")}}">
+                          <img src="{{ url_for('static', filename='images/cicd.png') }}" class="d-block w-100" alt="CI/CD">
+                      </a>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
