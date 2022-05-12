@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <h1 class="text-center">Docker</h1>
+    </div>
+    <br>
+
+    <img src="{{ url_for('static', filename='images/docker_diagram.png') }}" class="img-thumbnail" alt="Docker Diagram" >
+    <div class="container">
+        <h3>What is a Docker Container and an Image?</h3>
+        <div class="row">
+            <div class="col">
+                <p>
+                    A Dockerfile is a text document that contains commands to assemble a docker image.
+                    A Docker Image is a template or a blueprint used to build a docker container.
+                    A Docker Container is a running instance of a docker image, and contains all the necessary packages to
+                    run an application.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h3>How to get started</h3>
+        <div class="row">
+            <div class="col-8">
+                <ol class="list-group list-group-numbered">
+                  <li class="list-group-item">Create a Dockerfile using any text editor.</li>
+                  <li class="list-group-item">In the terminal use <code>docker build .</code> to build and image from the Dockerfile</li>
+                  <li class="list-group-item">In the terminal use <code>docker images</code> to find image id</li>
+                  <li class="list-group-item">In the terminal use <code>docker run -it -p port_number -d image_id</code> to create a container based on the image and get access to it through the terminal</li>
+                </ol>
+            </div>
+            <div class="col-4">
+                <img src="{{ url_for('static', filename='images/Docker_Architecture.png') }}" class="img-thumbnail" alt="Docker Architecture" >
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h3>Some useful docker commands</h3>
+        <div class="row">
+            <div class="col-8">
+                <ul class="list-group">
+                    <li class="list-group-item"><code>docker build</code> - used to build a docker image from a Dockerfile</li>
+                    <li class="list-group-item"><code>docker run</code> - used to create an instance of a docker image</li>
+                    <li class="list-group-item"><code>docker compose up --build</code> - used to build, (re)create, start, and attach to containers for a service</li>
+                    <li class="list-group-item"><code>docker images</code> - used to list most recently created images</li>
+                    <li class="list-group-item"><code>docker ps</code> - used to list running containers</li>
+                    <li class="list-group-item"><code>docker kill</code> - used to kill one or more running containers</li>
+                    <li class="list-group-item"><code>docker rm</code> - used to remove containers</li>
+                    <li class="list-group-item"><code>docker pull/push</code> - used to pull or push an image or a repository</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <a href="https://hub.docker.com/repository/docker/hss56/harshil_nginx_flask">
+            This is a link to the docker repository of this website.
+        </a>
+    </div>
+    <br>
+{% endblock %}

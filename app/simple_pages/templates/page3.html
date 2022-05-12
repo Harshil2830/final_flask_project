@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="text-center">Python/Flask</h1>
+    <br>
+
+    <div class="container">
+        <h3>What is Pytest?</h3>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    Pytest is a python based testing framework that allows users to write and execute test codes.
+                    It helps you to write simple to complex and scalable test cases for databases, APIs, or UI.
+                    Pytest is mainly used for writing tests for apis.
+                </p>
+                <h4>Advantages of Pytest:</h4>
+                    <ul class="list-group">
+                      <li class="list-group-item">Run multiple tests in parallel</li>
+                      <li class="list-group-item">Simple and easy syntax to learn</li>
+                      <li class="list-group-item">Open Source</li>
+                      <li class="list-group-item">Automatically detect test file and test functions automatically</li>
+                      <li class="list-group-item">Skip certain tests during execution</li>
+                    </ul>
+                <br>
+                <h4>Simple Pages:</h4>
+                <p>
+                    I created a blueprint of simple_pages to deliver html templates from the template's folder using render_template.
+                    I have a base.html file which contains the header and footers of each page, which is the same for all pages.
+                    Then I created html files with separate body contents for each webpage in the templates folder like this:
+                    <br>
+                    <code>
+                        { % extends "base.html" %}<br>
+                        { % block content %}<br>
+                            &lt;h1 class="text-center"&gt;CI/CD&lt;/h1&gt;<br>
+                            &lt;br&gt;<br>
+                        { % endblock %}<br>
+                    </code>
+                </p>
+            </div>
+            <div class="col-4">
+                <img src="{{ url_for('static', filename='images/pytest_logo.svg') }}" class="img-thumbnail" alt="Pytest Logo" >
+                <img src="{{ url_for('static', filename='images/simple_pages_code.JPG') }}" class="img-thumbnail mt-5" alt="Simple Pages Code Sample" >
+                <br><a class="btn btn-primary btn-lg m-3" href="https://github.com/Harshil2830/IS218F22DockerFlask" target="_blank">My Project on Github</a>
+                <br><a class="btn btn-primary btn-lg m-3" href="https://flask.palletsprojects.com/en/2.1.x/" target="_blank">Flask</a>
+                <a class="btn btn-primary btn-lg m-3" href="https://flask.palletsprojects.com/en/2.1.x/blueprints/" target="_blank">Flask Blueprints</a>
+                <br><a class="btn btn-primary btn-lg m-3" href="https://flask.palletsprojects.com/en/2.1.x/testing/" target="_blank">Flask testing with PyTest</a>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container">
+        <h3>Flask Project Outline</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-secondary border">Project Root Folder <- Root of the project.</li>
+          <li class="list-group-item bg-secondary border">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-success border">docker-compose.yml <- Orchestration file that contains the configuration to develop locally, it overrides the Dockerfile to run the flask development server instead of running the gunicorn server that is used for hosting on Heroku.</li>
+              <li class="list-group-item bg-success border">Dockerfile <- File used to create an image to run in a container that runs the program.</li>
+              <li class="list-group-item bg-success border">heroku.yml <- Specifies the Docker image to build for the app’s web process on Heroku.</li>
+              <li class="list-group-item bg-success border">readme.md <- A markdown file used to generate GitHub's html summary.</li>
+              <li class="list-group-item bg-success border">requirements.txt <- Used for specifying what python packages are required to run the project.</li>
+              <li class="list-group-item bg-success border">app Folder <- Contains all the files of the app.</li>
+              <li class="list-group-item bg-success border">
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item bg-info border">__init__.py <- constructor of your package or directory and contains the Flask application object creation.</li>
+                      <li class="list-group-item bg-info border">run.py <- This allows Gunicorn to serve the app in production.</li>
+                      <li class="list-group-item bg-info border">simple_pages folder <- used to serve pages of the website.</li>
+                      <li class="list-group-item bg-info border">
+                          <ul class="list-group list-group-flush">
+                              <li class="list-group-item bg-warning border">__init__.py <- contains blueprint and routes to serve the webpages.</li>
+                              <li class="list-group-item bg-warning border">templates folder <- contains html files of the website.</li>
+                              <li class="list-group-item bg-warning border">
+                                  <ul class="list-group list-group-flush">
+                                      <li class="list-group-item bg-danger border">page1.html, ... <- html pages of the website.</li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="list-group-item bg-info border">static folder <- contains assets used by the templates, including CSS files, JavaScript files, and images.</li>
+                      <li class="list-group-item bg-info border">
+                          <ul class="list-group list-group-flush">
+                              <li class="list-group-item bg-warning border">CSS folder <- contains css files.</li>
+                              <li class="list-group-item bg-warning border">images folder <- contains images.</li>
+                              <li class="list-group-item bg-warning border">js folder <- contains JavaScript files.</li>
+                          </ul>
+                      </li>
+                      <li class="list-group-item bg-info border">templates folder <- contains base.html.</li>
+                      <li class="list-group-item bg-info border">
+                          <ul class="list-group list-group-flush">
+                              <li class="list-group-item bg-warning border">base.html <- contains header and footer content shared amongst all the webpages.</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+              <li class="list-group-item bg-success border">tests Folder <- Contains files for testing the Flask project.</li>
+              <li class="list-group-item bg-success border">
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item bg-info border">conftest.py <- This file makes the test configuration setup.</li>
+                      <li class="list-group-item bg-info border">simple_pages_test.py <- Used to test the pages of the website.</li>
+                  </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+{% endblock %}

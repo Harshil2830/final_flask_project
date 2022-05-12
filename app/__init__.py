@@ -7,9 +7,11 @@ from flask_login import login_manager
 from flask_wtf import CSRFProtect
 from flask_cors import CORS
 
+from app.auth import auth
 from app.cli import create_database
-from app.db import db
+from app.db import db, database
 from app.db.models import User
+from app.simple_pages import simple_pages
 
 login_manager = flask_login.LoginManager()
 
@@ -37,9 +39,9 @@ def create_app():
     # https://bootstrap-flask.readthedocs.io/en/stable/
     bootstrap = Bootstrap5(app)
     # these load functions with web interface
-    # app.register_blueprint(simple_pages)
-    # app.register_blueprint(auth)
-    # app.register_blueprint(database)
+    app.register_blueprint(simple_pages)
+    app.register_blueprint(auth)
+    app.register_blueprint(database)
     # these load functionality without a web interface
 
     # app.register_blueprint(log_con)
@@ -53,11 +55,6 @@ def create_app():
         "methods": ["OPTIONS", "GET", "POST"],
     }
     CORS(app, resources={"/api/*": api_v1_cors_config})
-
-    # Run once at startup:
-    @app.route('/')
-    def hello():
-        return 'Hello, World!'
 
     return app
 

@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="text-center">Glossary</h1>
+    <br>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed bg-primary text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Object
+          </button>
+        </h1>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">An entity that has a state and behavior associated with it.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed bg-secondary text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Class
+          </button>
+        </h1>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">A collection of objects. A class contains the blueprints of objects that are created. It is a logical entity that contains some attributes and methods.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed bg-success text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Instantiation
+          </button>
+        </h1>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">The creation and naming of an object. It's an instance of a class.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingFour">
+          <button class="accordion-button collapsed bg-danger text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            Namespace
+          </button>
+        </h1>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">A collection of currently defined symbolic names along with information about the object that each name references.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingFive">
+          <button class="accordion-button collapsed bg-warning text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+            Constructor
+          </button>
+        </h1>
+        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">A special kind of method that is used when instantiating an object using the definitions found in a class.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingSix">
+          <button class="accordion-button collapsed bg-info text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+            Fixture
+          </button>
+        </h1>
+        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Provides a defined, reliable and consistent context for the tests. Fixtures define the steps and data that constitute the arrange phase of a test.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingSeven">
+          <button class="accordion-button collapsed bg-light text-dark bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+            Type Hint
+          </button>
+        </h1>
+        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Hint a data type for a variable. A way to make Python feel statically typed and can help structure your projects. Also, type hints can help to debug and prevent some dumb mistakes.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingEight">
+          <button class="accordion-button collapsed bg-primary text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+            Type Cast
+          </button>
+        </h1>
+        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">A way to convert the variable data type into another data type in order to do the operation required to be performed by users.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingNine">
+          <button class="accordion-button collapsed bg-secondary text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+            Unit Test
+          </button>
+        </h1>
+        <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body"> Testing individual components of a software program or application. It's used to check that all the individual parts are working as intended.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingTen">
+          <button class="accordion-button collapsed bg-success text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+            Static
+          </button>
+        </h1>
+        <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">The particular member belongs to a type itself, rather than to an instance of that type, and its lifetime is the entire program.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingEleven">
+          <button class="accordion-button collapsed bg-danger text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+            Instance Method
+          </button>
+        </h1>
+        <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Methods which require an object of its class to be created before it can be called. The most common type of methods in Python classes. To invoke an instance method, we have to create an Object of the class in which the method is defined.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingTwelve">
+          <button class="accordion-button collapsed bg-warning text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+            Instance Property
+          </button>
+        </h1>
+        <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">A typical property declared in a class is an instance property, meaning that you have a copy of that property’s value for each instance of the class.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingThirteen">
+          <button class="accordion-button collapsed bg-info text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThirteen" aria-expanded="false" aria-controls="flush-collapseThirteen">
+            Static Method
+          </button>
+        </h1>
+        <div id="flush-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="flush-headingThirteen" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Methods that can be called without creating an object of a class. They are referenced by the class name itself or reference to the object of that class.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingFourteen">
+          <button class="accordion-button collapsed bg-light text-dark bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFourteen" aria-expanded="false" aria-controls="flush-collapseFourteen">
+            Static Property
+          </button>
+        </h1>
+        <div id="flush-collapseFourteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFourteen" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Properties that have a single value for the entire class, regardless of the number of instances of the class that exist.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingFifteen">
+          <button class="accordion-button collapsed bg-primary text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFifteen" aria-expanded="false" aria-controls="flush-collapseFifteen">
+            Encapsulation
+          </button>
+        </h1>
+        <div id="flush-collapseFifteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFifteen" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Putting data and methods for that data in one unit, putting restrictions on the data and its methods. A class is an example of encapsulation as it encapsulates all the data that is member functions, variables, etc.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingSixteen">
+          <button class="accordion-button collapsed bg-secondary text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSixteen" aria-expanded="false" aria-controls="flush-collapseSixteen">
+            Inheritance
+          </button>
+        </h1>
+        <div id="flush-collapseSixteen" class="accordion-collapse collapse" aria-labelledby="flush-headingSixteen" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">The capability of one class to derive or inherit the properties from another class. It's just like real-world relationships, you can reuse the code, and allows you to add more features to a class without modifying it.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingSeventeen">
+          <button class="accordion-button collapsed bg-success text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeventeen" aria-expanded="false" aria-controls="flush-collapseSeventeen">
+              Polymorphism
+          </button>
+        </h1>
+        <div id="flush-collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="flush-headingSeventeen" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Polymorphism means having many forms. The same function name is used for different methods, but each with its own signature.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingEighteen">
+          <button class="accordion-button collapsed bg-danger text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEighteen" aria-expanded="false" aria-controls="flush-collapseEighteen">
+            Abstraction
+          </button>
+        </h1>
+        <div id="flush-collapseEighteen" class="accordion-collapse collapse" aria-labelledby="flush-headingEighteen" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Abstraction is like creating a blueprint of something. It allows you to declare a set of abstract methods without any implementation that must be created within any child classes built from the abstract class.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingNineteen">
+          <button class="accordion-button collapsed bg-warning text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNineteen" aria-expanded="false" aria-controls="flush-collapseNineteen">
+            SOLID
+          </button>
+        </h1>
+        <div id="flush-collapseNineteen" class="accordion-collapse collapse" aria-labelledby="flush-headingNineteen" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+              <strong>SOLID</strong> is an acronym for the first five object-oriented design principles by Robert C. Martin.<br>
+              <strong>Single-Responsibility</strong> - One class should only do one thing.<br>
+              <strong>Open-Closed</strong> - Objects or entities should be open for extension but closed for modification. This means you can extend the class but not modify it.<br>
+              <strong>Liskov Substitution</strong> - Objects of a superclass should be replaceable with objects of its subclasses without breaking the application.<br>
+              <strong>Interface Segregation</strong> - A client should not be exposed to methods it doesn't need. Declaring methods in an interface that the client doesn't need pollutes the interface and leads to a “bulky” or “fat” interface.<br>
+              <strong>Dependency Inversion</strong> - High level modules should not depend on low level modules; in fact both should depend on abstractions.<br>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark">
+        <h1 class="accordion-header" id="flush-headingTwenty">
+          <button class="accordion-button collapsed bg-info text-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwenty" aria-expanded="false" aria-controls="flush-collapseTwenty">
+            Design Patterns
+          </button>
+        </h1>
+        <div id="flush-collapseTwenty" class="accordion-collapse collapse" aria-labelledby="flush-headingTwenty" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">A general repeatable solution to a commonly occurring problem in software design. It is a description or template for how to solve a problem that can be used in many situations.</div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
