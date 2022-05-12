@@ -69,6 +69,8 @@ def logout():
     db.session.add(user)
     db.session.commit()
     logout_user()
+    log = logging.getLogger("user_activity")
+    log.info(user.email + " just logged out.")
     return redirect(url_for('auth.login'))
 
 
@@ -95,6 +97,8 @@ def edit_profile():
         db.session.add(current_user)
         db.session.commit()
         flash('You Successfully Updated your Profile', 'success')
+        log = logging.getLogger("user_activity")
+        log.info(user.email + " just updated their profile.")
         return redirect(url_for('auth.dashboard'))
     return render_template('profile_edit.html', form=form)
 
@@ -108,6 +112,8 @@ def edit_account():
         user.password = form.password.data
         db.session.add(current_user)
         db.session.commit()
+        log = logging.getLogger("user_activity")
+        log.info(user.email + " just updated their email or password.")
         flash('You Successfully Updated your Password or Email', 'success')
         return redirect(url_for('auth.dashboard'))
     return render_template('manage_account.html', form=form)
@@ -166,6 +172,8 @@ def add_user():
             db.session.add(user)
             db.session.commit()
             flash('Congratulations, you just created a user', 'success')
+            log = logging.getLogger("user_activity")
+            log.info(user.email + " just created a new user.")
             return redirect(url_for('auth.browse_users'))
         else:
             flash('Already Registered')
@@ -183,4 +191,6 @@ def delete_user(user_id):
     db.session.delete(user)
     db.session.commit()
     flash('User Deleted', 'success')
+    log = logging.getLogger("user_activity")
+    log.info(user.email + " just deleted a user.")
     return redirect(url_for('auth.browse_users'), 302)
